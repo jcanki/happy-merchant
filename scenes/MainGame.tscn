@@ -4,11 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dk2fslgd7phlo" path="res://assets/aset/tampilan in game/rak_belanjaan-removebg-preview.png" id="2_7fyak"]
 [ext_resource type="Texture2D" uid="uid://d1i5wrokciqih" path="res://assets/aset/tampilan in game/kulkas-removebg-preview.png" id="3_fpdtd"]
 [ext_resource type="Texture2D" uid="uid://c67lpjsludxbc" path="res://assets/aset/tampilan in game/meja.png" id="4_1hpqh"]
-[ext_resource type="Texture2D" uid="uid://bvaqrwxsfvhux" path="res://assets/aset/tampilan in game/Mesin kasir_2026-06-03_183722-removebg-preview.png" id="5_7f7ne"]
 [ext_resource type="Texture2D" uid="uid://dl0044lhqnqy1" path="res://assets/aset/tampilan in game/mesin EDC_2026-06-03_184835-removebg-preview.png" id="6_rtryj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fyak"]
-size = Vector2(464.1681, 136.00003)
 
 [node name="MainGame" type="Node2D" unique_id=153408127]
 
@@ -51,17 +47,6 @@ texture = ExtResource("3_fpdtd")
 position = Vector2(596.37506, 577)
 scale = Vector2(1.1479492, 0.56640625)
 texture = ExtResource("4_1hpqh")
-
-[node name="MesinKasir" type="Sprite2D" parent="AreaKasir" unique_id=509449163]
-position = Vector2(199.99998, 345)
-scale = Vector2(1.2167832, 0.85294116)
-texture = ExtResource("5_7f7ne")
-
-[node name="AreaScanneer" type="Area2D" parent="AreaKasir/MesinKasir" unique_id=363163857]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaKasir/MesinKasir/AreaScanneer" unique_id=1966892476]
-position = Vector2(550.13574, 143.03452)
-shape = SubResource("RectangleShape2D_7fyak")
 
 [node name="MesinEDC" type="Sprite2D" parent="AreaKasir" unique_id=1802050003]
 position = Vector2(410, 375.00003)
