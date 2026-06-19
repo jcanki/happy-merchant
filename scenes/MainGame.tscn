@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://jcyrc5xl8rat"]
+
+[ext_resource type="Texture2D" uid="uid://q5irki24jrxg" path="res://assets/aset/tampilan in game/brick_wall_yellow.png.png" id="1_hat22"]
+[ext_resource type="Texture2D" uid="uid://dk2fslgd7phlo" path="res://assets/aset/tampilan in game/rak_belanjaan-removebg-preview.png" id="2_7fyak"]
+[ext_resource type="Texture2D" uid="uid://d1i5wrokciqih" path="res://assets/aset/tampilan in game/kulkas-removebg-preview.png" id="3_fpdtd"]
+[ext_resource type="Texture2D" uid="uid://c67lpjsludxbc" path="res://assets/aset/tampilan in game/meja.png" id="4_1hpqh"]
+[ext_resource type="Texture2D" uid="uid://bvaqrwxsfvhux" path="res://assets/aset/tampilan in game/Mesin kasir_2026-06-03_183722-removebg-preview.png" id="5_7f7ne"]
+[ext_resource type="Texture2D" uid="uid://dl0044lhqnqy1" path="res://assets/aset/tampilan in game/mesin EDC_2026-06-03_184835-removebg-preview.png" id="6_rtryj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fyak"]
+size = Vector2(464.1681, 136.00003)
+
+[node name="MainGame" type="Node2D" unique_id=153408127]
+
+[node name="BackgroundToko" type="TextureRect" parent="." unique_id=964651122]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1160.4445
+offset_bottom = 649.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hat22")
+expand_mode = 1
+
+[node name="RakBelanja" type="Sprite2D" parent="." unique_id=21883236]
+position = Vector2(545, 238.99998)
+scale = Vector2(0.6893764, 0.6893764)
+texture = ExtResource("2_7fyak")
+
+[node name="RakBelanja2" type="Sprite2D" parent="." unique_id=882327744]
+position = Vector2(306, 237.99998)
+scale = Vector2(0.6893764, 0.6893764)
+texture = ExtResource("2_7fyak")
+
+[node name="Kulkas" type="Sprite2D" parent="." unique_id=1079432379]
+position = Vector2(1037, 244)
+scale = Vector2(0.7170901, 0.7170901)
+texture = ExtResource("3_fpdtd")
+
+[node name="Kulkas2" type="Sprite2D" parent="." unique_id=172417236]
+position = Vector2(789, 242.99998)
+scale = Vector2(0.7170901, 0.7170901)
+texture = ExtResource("3_fpdtd")
+
+[node name="AreaKasir" type="Node2D" parent="." unique_id=553601045]
+
+[node name="Meja" type="Sprite2D" parent="AreaKasir" unique_id=172699189]
+position = Vector2(596.37506, 577)
+scale = Vector2(1.1479492, 0.56640625)
+texture = ExtResource("4_1hpqh")
+
+[node name="MesinKasir" type="Sprite2D" parent="AreaKasir" unique_id=509449163]
+position = Vector2(199.99998, 345)
+scale = Vector2(1.2167832, 0.85294116)
+texture = ExtResource("5_7f7ne")
+
+[node name="AreaScanneer" type="Area2D" parent="AreaKasir/MesinKasir" unique_id=363163857]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaKasir/MesinKasir/AreaScanneer" unique_id=1966892476]
+position = Vector2(550.13574, 143.03452)
+shape = SubResource("RectangleShape2D_7fyak")
+
+[node name="MesinEDC" type="Sprite2D" parent="AreaKasir" unique_id=1802050003]
+position = Vector2(410, 375.00003)
+scale = Vector2(0.5073528, 0.44839695)
+texture = ExtResource("6_rtryj")
+
+[node name="TitikPelanggan" type="Marker2D" parent="." unique_id=87170094]
+position = Vector2(-2, 308)

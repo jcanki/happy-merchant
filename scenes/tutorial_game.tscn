@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c05g7ltuj63s0"]
+
+[ext_resource type="Script" uid="uid://ct8ypgl7mg7n1" path="res://scenes/tutorial_game.gd" id="1_v02ns"]
+[ext_resource type="Texture2D" uid="uid://cqhdsgkrd5bau" path="res://assets/aset/tampilan masuk game/backgrond menu 2.png" id="2_kr21v"]
+[ext_resource type="Texture2D" uid="uid://b48ut6831wnr6" path="res://assets/aset/character/character_ibu_2-removebg-preview.png" id="3_8be84"]
+[ext_resource type="Texture2D" uid="uid://vxfxoouhm4sa" path="res://assets/aset/tampilan in game/kolom_tutorial2-removebg-preview.png" id="4_22p2e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v02ns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kr21v"]
+
+[node name="TutorialGame" type="Node2D" unique_id=719671775]
+script = ExtResource("1_v02ns")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=109442831]
+offset_left = 6.0
+offset_right = 1154.0
+offset_bottom = 647.0
+size_flags_horizontal = 4
+texture = ExtResource("2_kr21v")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterIbu2RemovebgPreview" type="Sprite2D" parent="." unique_id=1233891890]
+position = Vector2(192.12502, 422)
+scale = Vector2(0.71189386, 0.7357019)
+texture = ExtResource("3_8be84")
+
+[node name="KolomTutorial2RemovebgPreview" type="Sprite2D" parent="." unique_id=1747040971]
+position = Vector2(626, 283)
+texture = ExtResource("4_22p2e")
+
+[node name="Label" type="Label" parent="." unique_id=676519920]
+modulate = Color(0, 0, 0, 1)
+light_mask = 3
+offset_left = 395.0
+offset_top = 163.0
+offset_right = 860.0
+offset_bottom = 448.0
+theme_override_font_sizes/font_size = 40
+text = "Hallo selamat 
+datang di 
+Happy Merchant
+"
+autowrap_mode = 2
+visible_characters_behavior = 1
+
+[node name="Button" type="Button" parent="." unique_id=651018429]
+offset_left = 764.0
+offset_top = 346.0
+offset_right = 843.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 29
+theme_override_icons/icon = SubResource("CompressedTexture2D_v02ns")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kr21v")
+text = "Next"
+
+[connection signal="pressed" from="Button" to="." method="_on_next_button_pressed"]

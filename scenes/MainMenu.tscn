@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cii6ca7sobgjh"]
+
+[ext_resource type="Script" uid="uid://bchtoy4tiwycv" path="res://scenes/main_menu.gd" id="1_l72w3"]
+[ext_resource type="Texture2D" uid="uid://hp3sxmy4besd" path="res://assets/aset/tampilan masuk game/background menu 3.png" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://b3pebq7au52p8" path="res://assets/aset/tombol/pop_up_menu_awal-removebg-preview.png" id="2_0ykhv"]
+[ext_resource type="Texture2D" uid="uid://dn536udwq270n" path="res://assets/aset/tombol/tombol_start-removebg-preview.png" id="3_2wh52"]
+[ext_resource type="Texture2D" uid="uid://c6y52wgysc2ko" path="res://assets/aset/tombol/tombol_exit-removebg-preview.png" id="4_ow34m"]
+
+[node name="MainMenu" type="Control" unique_id=822686970]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l72w3")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1354444075]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqorp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PapanMenu" type="TextureRect" parent="." unique_id=736652321]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = -97.0
+offset_right = -45.0
+offset_bottom = 154.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_0ykhv")
+expand_mode = 1
+
+[node name="btnexit" type="Button" parent="." unique_id=993778858]
+layout_mode = 0
+offset_left = 807.0
+offset_top = 365.0
+offset_right = 1072.0
+offset_bottom = 455.0
+icon = ExtResource("4_ow34m")
+flat = true
+expand_icon = true
+
+[node name="btnstart" type="Button" parent="." unique_id=690672774]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 269.0
+offset_right = 1067.0
+offset_bottom = 365.0
+icon = ExtResource("3_2wh52")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]
+[connection signal="pressed" from="btnstart" to="." method="_on_btnstart_pressed"]
