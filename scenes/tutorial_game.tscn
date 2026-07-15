@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c05g7ltuj63s0"]
 
-[ext_resource type="Script" uid="uid://ct8ypgl7mg7n1" path="res://scenes/tutorial_game.gd" id="1_v02ns"]
+[ext_resource type="Script" uid="uid://ct8ypgl7mg7n1" path="res://scripts/tutorial_game.gd" id="1_v02ns"]
 [ext_resource type="Texture2D" uid="uid://cqhdsgkrd5bau" path="res://assets/aset/tampilan masuk game/backgrond menu 2.png" id="2_kr21v"]
 [ext_resource type="Texture2D" uid="uid://d0s55e5uadvgu" path="res://assets/aset/character/ibu/sedekap.png" id="3_v02ns"]
 [ext_resource type="Texture2D" uid="uid://vxfxoouhm4sa" path="res://assets/aset/tampilan in game/kolom_tutorial2-removebg-preview.png" id="4_22p2e"]
@@ -22,28 +22,27 @@ texture = ExtResource("2_kr21v")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CharacterIbu2RemovebgPreview" type="TextureRect" parent="." unique_id=615721234]
-offset_left = 42.999996
-offset_top = 74.0
-offset_right = 399.76984
-offset_bottom = 760.5573
-scale = Vector2(0.81004614, 0.7690546)
+[node name="CharacterIbu2RemovebgPreview" type="TextureRect" parent="." unique_id=846892753]
+offset_left = 2.0
+offset_top = 113.0
+offset_right = 364.0
+offset_bottom = 653.0
 texture = ExtResource("3_v02ns")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 4
 
 [node name="KolomTutorial2RemovebgPreview" type="Sprite2D" parent="." unique_id=1747040971]
-position = Vector2(527, 206)
+position = Vector2(533, 230.00002)
 scale = Vector2(0.8202614, 0.89215684)
 texture = ExtResource("4_22p2e")
 
 [node name="Label" type="Label" parent="." unique_id=676519920]
 modulate = Color(0, 0, 0, 1)
 light_mask = 3
-offset_left = 334.0
-offset_top = 101.0
-offset_right = 727.0
-offset_bottom = 310.0
+offset_left = 348.0
+offset_top = 126.0
+offset_right = 741.0
+offset_bottom = 335.0
 theme_override_font_sizes/font_size = 30
 text = "Hallo selamat 
 datang di 
@@ -53,10 +52,10 @@ autowrap_mode = 2
 visible_characters_behavior = 1
 
 [node name="Button" type="Button" parent="." unique_id=651018429]
-offset_left = 596.0
-offset_top = 245.0
-offset_right = 725.0
-offset_bottom = 329.0
+offset_left = 597.0
+offset_top = 272.0
+offset_right = 726.0
+offset_bottom = 356.0
 theme_override_font_sizes/font_size = 29
 theme_override_icons/icon = SubResource("CompressedTexture2D_v02ns")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kr21v")

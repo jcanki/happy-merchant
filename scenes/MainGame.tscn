@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://jcyrc5xl8rat"]
 
+[ext_resource type="Script" uid="uid://b7l6atpjlqq2" path="res://scripts/main_game.gd" id="1_fpdtd"]
 [ext_resource type="Texture2D" uid="uid://q5irki24jrxg" path="res://assets/aset/tampilan in game/brick_wall_yellow.png.png" id="1_hat22"]
 [ext_resource type="Texture2D" uid="uid://dk2fslgd7phlo" path="res://assets/aset/tampilan in game/rak_belanjaan-removebg-preview.png" id="2_7fyak"]
 [ext_resource type="Texture2D" uid="uid://d1i5wrokciqih" path="res://assets/aset/tampilan in game/kulkas-removebg-preview.png" id="3_fpdtd"]
 [ext_resource type="Texture2D" uid="uid://c67lpjsludxbc" path="res://assets/aset/tampilan in game/meja.png" id="4_1hpqh"]
+[ext_resource type="Texture2D" uid="uid://b8ajjp5qe7snp" path="res://assets/aset/character/anakkecil/normalcewe.PNG" id="5_7f7ne"]
 [ext_resource type="Texture2D" uid="uid://dl0044lhqnqy1" path="res://assets/aset/tampilan in game/mesin EDC_2026-06-03_184835-removebg-preview.png" id="6_rtryj"]
+[ext_resource type="Texture2D" uid="uid://uwuw8cgil84" path="res://assets/aset/tampilan in game/monitor (2).PNG" id="7_1hpqh"]
+[ext_resource type="PackedScene" uid="uid://bs4jm6g3mtrww" path="res://scenes/ui_pembayaran.tscn" id="9_7f7ne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtryj"]
+size = Vector2(471.62408, 126.800224)
 
 [node name="MainGame" type="Node2D" unique_id=153408127]
+script = ExtResource("1_fpdtd")
 
 [node name="BackgroundToko" type="TextureRect" parent="." unique_id=964651122]
 anchors_preset = 15
@@ -43,15 +51,37 @@ texture = ExtResource("3_fpdtd")
 
 [node name="AreaKasir" type="Node2D" parent="." unique_id=553601045]
 
+[node name="pelanggan" type="Sprite2D" parent="AreaKasir" unique_id=1538572468]
+position = Vector2(1238.0001, 309)
+scale = Vector2(1.7897439, 1.720584)
+texture = ExtResource("5_7f7ne")
+
 [node name="Meja" type="Sprite2D" parent="AreaKasir" unique_id=172699189]
-position = Vector2(596.37506, 577)
-scale = Vector2(1.1479492, 0.56640625)
+position = Vector2(572, 528.00006)
+scale = Vector2(1.0626627, 0.49414063)
 texture = ExtResource("4_1hpqh")
 
+[node name="monitor" type="Sprite2D" parent="AreaKasir/Meja" unique_id=1106860890]
+position = Vector2(-245.11107, -390.17932)
+scale = Vector2(0.78034467, 1.5176731)
+texture = ExtResource("7_1hpqh")
+
+[node name="areascanner" type="Area2D" parent="AreaKasir/Meja/monitor" unique_id=582435901]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaKasir/Meja/monitor/areascanner" unique_id=1671390233]
+position = Vector2(747.03107, 135.748)
+scale = Vector2(1.0000005, 1.0000002)
+shape = SubResource("RectangleShape2D_rtryj")
+
 [node name="MesinEDC" type="Sprite2D" parent="AreaKasir" unique_id=1802050003]
-position = Vector2(410, 375.00003)
-scale = Vector2(0.5073528, 0.44839695)
+position = Vector2(516, 406)
+scale = Vector2(0.49289215, 0.36758086)
 texture = ExtResource("6_rtryj")
 
-[node name="TitikPelanggan" type="Marker2D" parent="." unique_id=87170094]
-position = Vector2(-2, 308)
+[node name="TitikPelanggan" type="Marker2D" parent="AreaKasir" unique_id=87170094]
+position = Vector2(634, 289)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=434796355]
+
+[node name="UI_Pembayaran" parent="CanvasLayer" unique_id=1654036933 instance=ExtResource("9_7f7ne")]
+visible = false

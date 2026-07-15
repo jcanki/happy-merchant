@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cqc6sap0jt1hk"]
+
+[ext_resource type="AudioStream" uid="uid://bjedge77sxsnl" path="res://assets/aset/audio/audio.ogg" id="1_05ggv"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=1321354514]
+stream = ExtResource("1_05ggv")
+autoplay = true
+
+[node name="BGN_Player" type="AudioStreamPlayer" parent="." unique_id=917414721]
+stream = ExtResource("1_05ggv")
+autoplay = true

@@ -1,0 +1,913 @@
+[gd_scene format=3 uid="uid://bs4jm6g3mtrww"]
+
+[ext_resource type="Script" uid="uid://cfnrtbst1angg" path="res://scripts/ui_pembayaran.gd" id="1_64qi7"]
+[ext_resource type="Texture2D" uid="uid://d1nywx3gvl27s" path="res://assets/aset/uang/1000-removebg-preview.png" id="1_gsho8"]
+[ext_resource type="Texture2D" uid="uid://g2n4qr16tu8x" path="res://assets/aset/belanjaan/tehtea.png" id="1_sobl5"]
+[ext_resource type="Texture2D" uid="uid://ryfhoeieis2d" path="res://assets/aset/uang/2000-removebg-preview.png" id="2_4f6ay"]
+[ext_resource type="Texture2D" uid="uid://tids1sm8obv8" path="res://assets/aset/belanjaan/telur.PNG" id="2_64qi7"]
+[ext_resource type="Texture2D" uid="uid://x1665tgpdijk" path="res://assets/aset/uang/5000-removebg-preview.png" id="3_4ys7m"]
+[ext_resource type="Texture2D" uid="uid://cuc45hsl50yxf" path="res://assets/aset/uang/10.000-removebg-preview.png" id="4_7k3to"]
+[ext_resource type="Texture2D" uid="uid://cc1knpdkvsah6" path="res://assets/aset/uang/20000-removebg-preview.png" id="5_sobl5"]
+[ext_resource type="Texture2D" uid="uid://b2xmbgoh1p00t" path="res://assets/aset/uang/50.000-removebg-preview.png" id="6_64qi7"]
+[ext_resource type="Texture2D" uid="uid://w3fd7adpm30u" path="res://assets/aset/uang/100.000-removebg-preview.png" id="7_qyvsa"]
+[ext_resource type="Texture2D" uid="uid://c4m1k3qwygiba" path="res://assets/aset/uang/500-removebg-preview.png" id="8_flm6j"]
+[ext_resource type="Texture2D" uid="uid://bq8wa3tkf4yvc" path="res://assets/aset/tombol/undo-removebg-preview.png" id="11_qyvsa"]
+[ext_resource type="Texture2D" uid="uid://dn536udwq270n" path="res://assets/aset/tombol/tombol_start-removebg-preview.png" id="13_64qi7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_asum6"]
+
+[node name="UI_Pembayaran" type="Control" unique_id=1654036933]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64qi7")
+
+[node name="panelkiri" type="Panel" parent="." unique_id=1282958501]
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 645.0
+
+[node name="TeksTotal" type="Label" parent="panelkiri" unique_id=897884541]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 447.0
+offset_right = 130.0
+offset_bottom = 470.0
+text = "Total : Rp 0"
+
+[node name="TeksDiterima" type="Label" parent="panelkiri" unique_id=363402390]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 486.0
+offset_right = 158.0
+offset_bottom = 509.0
+text = "Diterima : RP 0"
+
+[node name="TeksKembalian" type="Label" parent="panelkiri" unique_id=938191764]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 531.0
+offset_right = 172.0
+offset_bottom = 554.0
+text = "Kembalian : RP 0"
+
+[node name="kotakStruk" type="ScrollContainer" parent="panelkiri" unique_id=1293196021]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 460.0
+offset_bottom = 324.0
+
+[node name="GridBelanja" type="GridContainer" parent="panelkiri/kotakStruk" unique_id=580663058]
+layout_mode = 2
+columns = 6
+
+[node name="templatebarang" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=71146709]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang" unique_id=1591959087]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang/GambarBarang" unique_id=1622251880]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang7" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=508377368]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang7" unique_id=311999833]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("2_64qi7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang7/GambarBarang" unique_id=1329877435]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang12" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=260525425]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang12" unique_id=1024009927]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang12/GambarBarang" unique_id=1768647553]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang13" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=476279407]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang13" unique_id=913442508]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang13/GambarBarang" unique_id=1991761163]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang14" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=353092754]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang14" unique_id=2047018037]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang14/GambarBarang" unique_id=1418434386]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang15" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1904452481]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang15" unique_id=835979919]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang15/GambarBarang" unique_id=629545723]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang16" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1869476939]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang16" unique_id=992052912]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang16/GambarBarang" unique_id=1352462973]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang17" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1909552128]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang17" unique_id=1130667957]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang17/GambarBarang" unique_id=1406124939]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang18" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1277641114]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang18" unique_id=1548319719]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang18/GambarBarang" unique_id=1150823533]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang19" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=664115975]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang19" unique_id=2107655241]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang19/GambarBarang" unique_id=198775778]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang20" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=485054776]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang20" unique_id=1730831320]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang20/GambarBarang" unique_id=1952745596]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang21" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=768687597]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang21" unique_id=1978860445]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang21/GambarBarang" unique_id=1185887544]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang22" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1629025872]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang22" unique_id=1948537298]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang22/GambarBarang" unique_id=580354133]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang23" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=521558552]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang23" unique_id=1818001314]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang23/GambarBarang" unique_id=838675853]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang24" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=433829596]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang24" unique_id=1166809329]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang24/GambarBarang" unique_id=475509968]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang25" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=130912323]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang25" unique_id=600388402]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang25/GambarBarang" unique_id=1332335321]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang26" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=2028348739]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang26" unique_id=1426301312]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang26/GambarBarang" unique_id=1143040971]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang27" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=687830501]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang27" unique_id=1888585250]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang27/GambarBarang" unique_id=953583250]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang28" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=857398756]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang28" unique_id=543980251]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang28/GambarBarang" unique_id=850238471]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang29" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=600020914]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang29" unique_id=69558695]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang29/GambarBarang" unique_id=852567977]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang30" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1034392573]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang30" unique_id=1390946875]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang30/GambarBarang" unique_id=1007171226]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang31" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1803303961]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang31" unique_id=464458048]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang31/GambarBarang" unique_id=430588333]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang32" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1523159265]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang32" unique_id=461322294]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang32/GambarBarang" unique_id=763291421]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang33" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=681746034]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang33" unique_id=1739078258]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang33/GambarBarang" unique_id=680865403]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang34" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1289858977]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang34" unique_id=84926322]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang34/GambarBarang" unique_id=1727541753]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang35" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1958608569]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang35" unique_id=1976187897]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang35/GambarBarang" unique_id=714832609]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang36" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1489253466]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang36" unique_id=1848331970]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang36/GambarBarang" unique_id=1099684906]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang37" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=295329538]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang37" unique_id=1547075933]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang37/GambarBarang" unique_id=1557665471]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang38" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1054741965]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang38" unique_id=1848404038]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang38/GambarBarang" unique_id=1956650826]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang39" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=1725655636]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang39" unique_id=613303406]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang39/GambarBarang" unique_id=1141407080]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang8" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=2123981133]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang8" unique_id=154089854]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang8/GambarBarang" unique_id=951223152]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang9" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=26467220]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang9" unique_id=1662223575]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang9/GambarBarang" unique_id=545600513]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang10" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=209158049]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang10" unique_id=1707409857]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang10/GambarBarang" unique_id=1112236079]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang11" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=2021810457]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang11" unique_id=663640918]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang11/GambarBarang" unique_id=971457972]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang2" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=212827799]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang2" unique_id=202535223]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang2/GambarBarang" unique_id=1348786785]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang3" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=2001944182]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang3" unique_id=38032977]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang3/GambarBarang" unique_id=1572792186]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang4" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=2110739634]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang4" unique_id=641197409]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang4/GambarBarang" unique_id=168496395]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang5" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=304603308]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang5" unique_id=1541483565]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang5/GambarBarang" unique_id=265958525]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="templatebarang6" type="VBoxContainer" parent="panelkiri/kotakStruk/GridBelanja" unique_id=2011001864]
+layout_mode = 2
+
+[node name="GambarBarang" type="TextureRect" parent="panelkiri/kotakStruk/GridBelanja/templatebarang6" unique_id=1878581060]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_sobl5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeksHarga" type="Label" parent="panelkiri/kotakStruk/GridBelanja/templatebarang6/GambarBarang" unique_id=1355718484]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 62.0
+offset_bottom = 71.0
+text = "Rp.5000"
+label_settings = SubResource("LabelSettings_asum6")
+horizontal_alignment = 1
+
+[node name="Panelkanan" type="Panel" parent="." unique_id=1281822143]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 3.0
+offset_right = 1150.0
+offset_bottom = 644.0
+
+[node name="GridContainer" type="GridContainer" parent="Panelkanan" unique_id=139487405]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 418.0
+offset_bottom = 640.0
+columns = 2
+
+[node name="TextureButton" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=942208145]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_gsho8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=1335192334]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_4f6ay")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=893356012]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_4ys7m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=845403128]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_7k3to")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=2013364996]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("5_sobl5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=695757353]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_64qi7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton7" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=1682842439]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_qyvsa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton8" type="TextureButton" parent="Panelkanan/GridContainer" unique_id=1114872219]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("8_flm6j")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WadahTombolAksi" type="HBoxContainer" parent="Panelkanan" unique_id=511048212]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 568.0
+offset_right = 372.0
+offset_bottom = 628.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BtnUndo" type="TextureButton" parent="Panelkanan/WadahTombolAksi" unique_id=816378624]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+texture_normal = ExtResource("11_qyvsa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnEnter" type="TextureButton" parent="Panelkanan/WadahTombolAksi" unique_id=611056959]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+texture_normal = ExtResource("13_64qi7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton7" to="." method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="Panelkanan/GridContainer/TextureButton8" to="." method="_on_texture_button_8_pressed"]
+[connection signal="pressed" from="Panelkanan/WadahTombolAksi/BtnUndo" to="." method="_on_btn_undo_pressed"]
+[connection signal="pressed" from="Panelkanan/WadahTombolAksi/BtnEnter" to="." method="_on_btn_enter_pressed"]

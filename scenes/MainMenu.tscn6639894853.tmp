@@ -146,7 +146,7 @@ offset_bottom = 257.0
 texture = ExtResource("13_ptake")
 expand_mode = 1
 
-[node name="pagar2" type="TextureRect" parent="." unique_id=224577500]
+[node name="pagar 2" type="TextureRect" parent="." unique_id=224577500]
 layout_mode = 0
 offset_left = 836.0
 offset_top = 433.0
@@ -155,7 +155,7 @@ offset_bottom = 596.0
 texture = ExtResource("11_2nypq")
 expand_mode = 1
 
-[node name="rumput" type="TextureRect" parent="pagar2" unique_id=1359547213]
+[node name="rumput" type="TextureRect" parent="pagar 2" unique_id=1359547213]
 layout_mode = 0
 offset_left = 107.0
 offset_top = 62.0
